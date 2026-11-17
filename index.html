@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maicoll Calderón — Full Stack .NET Developer</title>
+<meta name="description" content="Full Stack .NET Developer (Mid-level): C#, ASP.NET Core, Oracle PL/SQL, React. Portfolio interactivo.">
+<meta property="og:title" content="Maicoll Calderón — Full Stack .NET Developer">
+<meta property="og:description" content="Sistemas nacionales en producción. C# · .NET 8 · Oracle · React. Explora mi trayectoria como un mapa de misiones.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="brand" href="#top">MC<span>.dev</span></a>
+  <nav>
+    <a href="#map" data-i18n="nav_map">Misiones</a>
+    <a href="#skills" data-i18n="nav_skills">Habilidades</a>
+    <a href="#projects" data-i18n="nav_projects">Proyectos</a>
+    <a href="#method" data-i18n="nav_method">Método</a>
+    <a href="#contact" data-i18n="nav_contact">Contacto</a>
+  </nav>
+  <button id="lang" class="pill" aria-label="Change language">EN</button>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <p class="eyebrow" data-i18n="hero_eyebrow">Full Stack .NET Developer · Mid-level</p>
+  <h1>Maicoll Andrés<br><em>Calderón Pardo</em></h1>
+  <p class="lead" data-i18n="hero_lead">Construyo sistemas que reemplazan procesos manuales por plataformas web a escala nacional. C#, .NET 8, Oracle PL/SQL y React, con análisis previo y la IA como copiloto.</p>
+  <div class="cta">
+    <a class="btn primary" href="#map" id="start"><span data-i18n="hero_start">▶ Iniciar recorrido</span></a>
+    <a class="btn" href="#about" data-i18n="hero_skip">Prefiero la versión clásica</a>
+    <a class="btn ghost" href="https://github.com/IngMaicollAndresCalderonPardo" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+  <ul class="stats">
+    <li><b>5</b><span data-i18n="st1">años de experiencia</span></li>
+    <li><b>6</b><span data-i18n="st2">equipos / proyectos</span></li>
+    <li><b data-i18n="st3v">Nacional</b><span data-i18n="st3">alcance en producción</span></li>
+    <li><b>ES · EN</b><span data-i18n="st4">equipos internacionales</span></li>
+  </ul>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="block">
+  <h2 data-i18n="about_t">Sobre mí</h2>
+  <div class="two">
+    <p data-i18n="about_p1">Ingeniero de Sistemas (Universidad Cooperativa de Colombia, 2023) con foco en backend C#/.NET sobre bases de datos Oracle y SQL Server. He migrado sistemas heredados (VB, PHP, .NET Framework) a ASP.NET Core y entregado módulos que hoy usan personas en todo el país.</p>
+    <p data-i18n="about_p2">Antes de escribir código me gusta entender el negocio: reuniones, flujos, estados y reglas. Con ese contexto analizo, estimo tiempos y recién ahí implemento. Uso IA generativa para medir tareas, explorar arquitectura y acelerar, y siempre reviso lo que produce. Aprendo de forma constante y no me rindo ante un problema difícil.</p>
+  </div>
+</section>
+
+<!-- MAP -->
+<section id="map" class="block">
+  <h2 data-i18n="map_t">Mapa de misiones</h2>
+  <p class="sub" data-i18n="map_sub">Mi trayectoria como un recorrido. Toca cada nivel para ver qué hice y qué aprendí.</p>
+  <div class="progress" aria-live="polite">
+    <div class="bar"><i id="bar"></i></div>
+    <span id="count">0/6</span>
+  </div>
+  <ol class="path" id="path"></ol>
+  <div id="win" class="win" hidden></div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="block">
+  <h2 data-i18n="sk_t">Árbol de habilidades</h2>
+  <p class="sub" data-i18n="sk_sub">Autoevaluación honesta por nivel de dominio.</p>
+  <div class="legend">
+    <span><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i> <span data-i18n="lv3">Dominio diario</span></span>
+    <span><i class="pip on"></i><i class="pip on"></i><i class="pip"></i> <span data-i18n="lv2">Sólido</span></span>
+    <span><i class="pip on"></i><i class="pip"></i><i class="pip"></i> <span data-i18n="lv1">En crecimiento</span></span>
+  </div>
+  <div class="grid" id="skillgrid"></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="block">
+  <h2 data-i18n="pr_t">Proyectos destacados</h2>
+  <p class="sub" data-i18n="pr_sub">Mi trabajo en la Policía Nacional es institucional y no es público; estos repositorios muestran cómo construyo.</p>
+  <div class="cards" id="cards"></div>
+</section>
+
+<!-- METHOD -->
+<section id="method" class="block">
+  <h2 data-i18n="me_t">Cómo trabajo</h2>
+  <ol class="steps" id="steps"></ol>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="block contact">
+  <h2 data-i18n="ct_t">Hablemos</h2>
+  <p class="sub" data-i18n="ct_sub">Busco un rol remoto (nacional o internacional) como desarrollador .NET / Full Stack.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:ing.maicollcalderonpardo@gmail.com">✉ ing.maicollcalderonpardo@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/maicoll-calderon-pardo" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="btn" href="https://github.com/IngMaicollAndresCalderonPardo" target="_blank" rel="noopener">GitHub ↗</a>
+  </div>
+  <p class="small" data-i18n="ct_en">Inglés: B1 y en mejora activa (trabajé con equipos de EE. UU. en Parserr).</p>
+</section>
+</main>
+
+<footer>© <span id="yr"></span> Maicoll Calderón · <span data-i18n="foot">Hecho a mano con HTML, CSS y JS.</span></footer>
+
+<script src="app.js"></script>
+</body>
+</html>
