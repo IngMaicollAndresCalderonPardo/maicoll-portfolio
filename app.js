@@ -20,7 +20,7 @@ es: {
   ct_en:"Inglés: B1 y en mejora activa (trabajé con equipos de EE. UU. en Parserr).",
   foot:"Hecho a mano con HTML, CSS y JS.",
   win_t:"🏆 Logro desbloqueado: Recorrido completo",
-  win_p:"Pasaste por los 6 niveles. Si te interesa lo que viste, escríbeme: me encantaría contarte más.",
+  win_p:"Pasaste por todos los niveles. Si te interesa lo que viste, escríbeme: me encantaría contarte más.",
   view:"Ver repositorio →", boss:"NIVEL ACTUAL"
 },
 en: {
@@ -41,7 +41,7 @@ en: {
   ct_en:"English: B1 and actively improving (I worked with US teams at Parserr).",
   foot:"Handcrafted with HTML, CSS and JS.",
   win_t:"🏆 Achievement unlocked: Full tour completed",
-  win_p:"You went through all 6 levels. If you liked what you saw, reach out — I'd love to tell you more.",
+  win_p:"You went through every level. If you liked what you saw, reach out — I'd love to tell you more.",
   view:"View repository →", boss:"CURRENT LEVEL"
 }};
 
@@ -58,6 +58,10 @@ const LEVELS = [
    pts:{es:["Migré aplicaciones heredadas de PHP a C# y ASP.NET MVC.","Desarrollé los módulos de Enfermería y Oncología, reemplazando procesos manuales en Excel.","Diseño de bases de datos, diagramas UML y pruebas unitarias con xUnit sobre Oracle."],
         en:["Migrated legacy PHP applications to C# and ASP.NET MVC.","Built the Nursing and Oncology modules, replacing manual Excel processes.","Database design, UML diagrams and xUnit unit tests on Oracle."]},
    tech:["ASP.NET MVC","Oracle","xUnit","UML"] },
+ { when:{es:"Feb 2025 – Ago 2025",en:"Feb 2025 – Aug 2025"}, role:{es:"Formación autodirigida",en:"Self-directed training"}, org:{es:"Inglés y proyectos de práctica",en:"English and practice projects"},
+   pts:{es:["Estudio diario de inglés: de A2 a B1.","Construí y publiqué proyectos en GitHub: microservicios con Python + React + Docker, Angular + ASP.NET Core, arquitectura limpia en .NET 8, xUnit y PL/SQL.","Convertí una pausa en preparación: más inglés, más práctica y mejores bases."],
+        en:["Daily English study: from A2 to B1.","Built and published GitHub projects: Python + React + Docker microservices, Angular + ASP.NET Core, clean architecture in .NET 8, xUnit and PL/SQL.","Turned a pause into preparation: more English, more practice and stronger foundations."]},
+   tech:["English","Python","React","Docker","xUnit"] },
  { when:{es:"Sep 2025 – Nov 2025",en:"Sep 2025 – Nov 2025"}, role:{es:"Desarrollador .NET (remoto, EE. UU.)",en:".NET Developer (remote, USA)"}, org:"Parserr",
    pts:{es:["APIs y endpoints en .NET/C# con Entity Framework.","Pruebas unitarias bajo la metodología de testing de la compañía.","Integración backend con React y coordinación con el equipo frontend.","Comunicación técnica en inglés con equipos internacionales y con el CEO; Agile/Scrum, Azure y Rider."],
         en:[".NET/C# APIs and endpoints with Entity Framework.","Unit testing following the company's testing methodology.","Backend integration with React and coordination with the frontend team.","Technical communication in English with international teams and the CEO; Agile/Scrum, Azure and Rider."]},
@@ -90,7 +94,12 @@ const SKILLS = [
   ["Docker / Compose",2,{es:"Microservicios reproducibles",en:"Reproducible microservices"}],
   ["Azure DevOps CI/CD",2,{es:"Pipelines YAML",en:"YAML pipelines"}],
   ["Git",3,{es:"Control de versiones",en:"Version control"}],
-  ["IA generativa",3,{es:"Análisis, estimación y código asistido",en:"Analysis, estimation and assisted coding"}]]}
+  ["IA generativa",3,{es:"Análisis, estimación y código asistido",en:"Analysis, estimation and assisted coding"}]]},
+ {g:{es:"Versatilidad",en:"Versatility"}, items:[
+  ["Código heredado",3,{es:"Leer y migrar VB, PHP y .NET Framework",en:"Reading and migrating VB, PHP and .NET Framework"}],
+  ["Jobs en base de datos",2,{es:"Tareas programadas y por lotes en Oracle/SQL Server",en:"Scheduled and batch tasks in Oracle/SQL Server"}],
+  ["Android / Kotlin",1,{es:"Apps móviles en Android Studio, Kotlin básico",en:"Mobile apps in Android Studio, basic Kotlin"}],
+  ["Unity",1,{es:"Formación en desarrollo de juegos",en:"Game development training"}]]}
 ];
 
 const PROJECTS = [
@@ -125,7 +134,7 @@ function render(){
     <li class="lvl${l.boss?" boss":""}${done.has(i)?" done open":""}" data-n="${i+1}" data-i="${i}">
       <button aria-expanded="${done.has(i)}">
         <div class="top"><h3>${l.role[lang]}${l.boss?`<span class="tag">${t.boss}</span>`:""}</h3><span class="when">${l.when[lang]}</span></div>
-        <div class="org">${l.org}</div>
+        <div class="org">${typeof l.org==="string"?l.org:l.org[lang]}</div>
         <div class="detail"><div>
           <ul>${l.pts[lang].map(p=>`<li>${p}</li>`).join("")}</ul>
           <div class="chips">${l.tech.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
