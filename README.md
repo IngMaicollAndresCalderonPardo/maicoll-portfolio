@@ -6,20 +6,20 @@ Portfolio interactivo de **Maicoll Andrés Calderón Pardo**, Full Stack .NET De
 
 ## Qué incluye
 
-- 🗺️ **Mapa de misiones:** mi trayectoria (2021 – hoy) como un recorrido de niveles interactivo.
-- 🌳 **Árbol de habilidades** con autoevaluación por nivel de dominio.
-- 🚀 **Proyectos destacados** con enlaces a sus repositorios.
-- 🧭 **Cómo trabajo:** contexto, análisis, estimación con IA, implementación, pruebas y soporte.
-- 🌐 **Bilingüe** (ES/EN) y con modo claro/oscuro automático.
+- 🧭 **Hero interactivo:** el nombre reacciona al cursor y un esquema animado cuenta «proceso manual → plataforma nacional».
+- 🕰️ **Trayectoria + stack ligados:** al hacer scroll por los roles, el stack se ilumina según lo que usé en cada uno; al pasar el cursor por una habilidad se resaltan los roles donde la usé. Sin clics.
+- 🚀 **Proyectos:** Stentro (software de inventario con IA para pymes, donde participo como Full Stack Developer) como bloque destacado, y un índice con enlaces a mis repositorios.
+- 🧩 **Método:** contexto, análisis, estimación con IA, implementación, pruebas y soporte.
+- 🌐 **Bilingüe** (ES/EN) y tema claro/oscuro (automático, con botón para cambiarlo).
 
 ## Tecnología
 
-HTML, CSS y JavaScript puros, sin frameworks ni dependencias externas. Hospedado en GitHub Pages.
+HTML, CSS y JavaScript puros, sin frameworks. Solo se cargan las fuentes Bricolage Grotesque y JetBrains Mono desde Google Fonts (con tipografías del sistema como respaldo). Hospedado en GitHub Pages.
 
 ```
 index.html   estructura y secciones
 styles.css   diseño, temas claro/oscuro y responsive
-app.js       datos (trayectoria, habilidades, proyectos), i18n y mapa interactivo
+app.js       datos (trayectoria, habilidades, proyectos), i18n e interacciones
 ```
 
 Para verlo en local basta con abrir `index.html` en el navegador.
@@ -32,7 +32,7 @@ Interactive portfolio of **Maicoll Andrés Calderón Pardo**, Full Stack .NET De
 
 🔗 **Live:** https://ingmaicollandrescalderonpardo.github.io/maicoll-portfolio/
 
-An interactive mission map of my career (2021 – present), a skill tree, featured projects and my working method. Bilingual (ES/EN), light/dark themes, built with plain HTML, CSS and JavaScript and hosted on GitHub Pages.
+A career timeline whose stack lights up as you scroll, featured projects and my working method. Bilingual (ES/EN), light/dark themes, built with plain HTML, CSS and JavaScript and hosted on GitHub Pages.
 
 ## License
 

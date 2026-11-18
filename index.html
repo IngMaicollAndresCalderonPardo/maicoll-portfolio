@@ -4,105 +4,177 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Maicoll Calderón — Full Stack .NET Developer</title>
-<meta name="description" content="Full Stack .NET Developer (Mid-level): C#, ASP.NET Core, Oracle PL/SQL, React. Portfolio interactivo.">
+<meta name="description" content="Full Stack .NET Developer (Mid-level): C#, ASP.NET Core, Oracle PL/SQL, React. Sistemas nacionales en producción.">
 <meta property="og:title" content="Maicoll Calderón — Full Stack .NET Developer">
-<meta property="og:description" content="Sistemas nacionales en producción. C# · .NET 8 · Oracle · React. Explora mi trayectoria como un mapa de misiones.">
+<meta property="og:description" content="Sistemas nacionales en producción. C# · .NET 8 · Oracle · React.">
+<meta name="theme-color" content="#efe9dc">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316140e'/%3E%3Cpath d='M12 46V18h8l12 16 12-16h8v28h-7V30L32 46 19 30v16z' fill='%23ff4d12'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="#top">MC<span>.dev</span></a>
-  <nav>
-    <a href="#map" data-i18n="nav_map">Misiones</a>
-    <a href="#skills" data-i18n="nav_skills">Habilidades</a>
-    <a href="#projects" data-i18n="nav_projects">Proyectos</a>
-    <a href="#method" data-i18n="nav_method">Método</a>
-    <a href="#contact" data-i18n="nav_contact">Contacto</a>
-  </nav>
-  <button id="lang" class="pill" aria-label="Change language">EN</button>
+<header class="top" id="topbar">
+  <div class="wrap bar">
+    <a class="brand" href="#top" aria-label="Inicio"><b>MC</b><span>Maicoll Calderón</span></a>
+    <nav aria-label="Principal">
+      <a href="#perfil" data-i18n="nav_profile">Perfil</a>
+      <a href="#trayectoria" data-i18n="nav_work">Trayectoria</a>
+      <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+      <a href="#metodo" data-i18n="nav_method">Método</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div class="ctl">
+      <button id="theme" class="icon" aria-label="Cambiar tema" title="Tema">◐</button>
+      <button id="lang" class="icon txt" aria-label="Change language">EN</button>
+    </div>
+  </div>
+  <i class="sp" id="sp"></i>
 </header>
 
 <main id="top">
 
 <!-- HERO -->
 <section class="hero">
-  <p class="eyebrow" data-i18n="hero_eyebrow">Full Stack .NET Developer · Mid-level</p>
-  <h1>Maicoll Andrés<br><em>Calderón Pardo</em></h1>
-  <p class="lead" data-i18n="hero_lead">Construyo sistemas que reemplazan procesos manuales por plataformas web a escala nacional. C#, .NET 8, Oracle PL/SQL y React, con análisis previo y la IA como copiloto.</p>
-  <div class="cta">
-    <a class="btn primary" href="#map" id="start"><span data-i18n="hero_start">▶ Iniciar recorrido</span></a>
-    <a class="btn" href="#about" data-i18n="hero_skip">Prefiero la versión clásica</a>
-    <a class="btn ghost" href="https://github.com/IngMaicollAndresCalderonPardo" target="_blank" rel="noopener">GitHub ↗</a>
+  <div class="wrap">
+    <p class="eyebrow"><span class="live"></span><span data-i18n="hero_eyebrow">Full Stack .NET Developer · Mid-level</span></p>
+    <h1 id="name" aria-label="Maicoll Calderón">Maicoll<br>Calderón</h1>
+
+    <div class="hero-row">
+      <div class="lead-col">
+        <p class="lead" data-i18n="hero_lead">Construyo sistemas que reemplazan procesos manuales por plataformas web a escala nacional. C#, .NET 8, Oracle PL/SQL y React, con análisis previo y la IA como copiloto.</p>
+      </div>
+      <div class="hero-links">
+        <a class="btn solid" href="#trayectoria"><span data-i18n="hero_cta">Ver trayectoria</span> <i>↓</i></a>
+        <a class="btn" href="https://github.com/IngMaicollAndresCalderonPardo" target="_blank" rel="noopener">GitHub <i>↗</i></a>
+        <a class="btn" href="https://www.linkedin.com/in/maicoll-calderon-pardo" target="_blank" rel="noopener">LinkedIn <i>↗</i></a>
+      </div>
+    </div>
+
+    <!-- de proceso manual a plataforma nacional -->
+    <div class="flow" aria-label="De proceso manual a plataforma nacional">
+      <div class="node n1">
+        <small data-i18n="f1k">Antes</small>
+        <b data-i18n="f1v">Excel, plantillas llenadas a mano, sistemas heredados</b>
+        <div class="art sheets" aria-hidden="true"><i></i><i></i><i></i></div>
+      </div>
+      <div class="link" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="node n2">
+        <small data-i18n="f2k">Mi parte</small>
+        <b data-i18n="f2v">Análisis, PL/SQL y C#</b>
+        <div class="art code" aria-hidden="true">{ }</div>
+      </div>
+      <div class="link acc" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="node n3">
+        <small data-i18n="f3k">Después</small>
+        <b data-i18n="f3v">Plataformas web de alcance nacional</b>
+        <div class="art dots" aria-hidden="true"></div>
+      </div>
+    </div>
+
+    <ul class="ficha">
+      <li><b data-count="5">5</b><span data-i18n="st1">años de experiencia</span></li>
+      <li><b data-count="6">6</b><span data-i18n="st2">equipos / proyectos</span></li>
+      <li><b data-i18n="st3v">Nacional</b><span data-i18n="st3">alcance en producción</span></li>
+      <li><b>ES · EN</b><span data-i18n="st4">equipos internacionales</span></li>
+    </ul>
   </div>
-  <ul class="stats">
-    <li><b>5</b><span data-i18n="st1">años de experiencia</span></li>
-    <li><b>6</b><span data-i18n="st2">equipos / proyectos</span></li>
-    <li><b data-i18n="st3v">Nacional</b><span data-i18n="st3">alcance en producción</span></li>
-    <li><b>ES · EN</b><span data-i18n="st4">equipos internacionales</span></li>
-  </ul>
 </section>
 
-<!-- ABOUT -->
-<section id="about" class="block">
-  <h2 data-i18n="about_t">Sobre mí</h2>
-  <div class="two">
-    <p data-i18n="about_p1">Ingeniero de Sistemas (Universidad Cooperativa de Colombia, 2023) con foco en backend C#/.NET sobre bases de datos Oracle y SQL Server. He migrado sistemas heredados (VB, PHP, .NET Framework) a ASP.NET Core y entregado módulos que hoy usan personas en todo el país.</p>
-    <p data-i18n="about_p2">Antes de escribir código me gusta entender el negocio: reuniones, flujos, estados y reglas. Con ese contexto analizo, estimo tiempos y recién ahí implemento. Uso IA generativa para medir tareas, explorar arquitectura y acelerar, y siempre reviso lo que produce. Aprendo de forma constante y no me rindo ante un problema difícil.</p>
+<!-- PERFIL -->
+<section id="perfil" class="sec">
+  <div class="wrap grid">
+    <div class="lab"><b>01</b> <span data-i18n="nav_profile">Perfil</span></div>
+    <div class="content">
+      <p class="statement rv" data-i18n="statement">Entiendo el negocio primero. Después construyo el sistema.</p>
+      <div class="cols rv">
+        <p data-i18n="about_p1">Ingeniero de Sistemas (Universidad Cooperativa de Colombia, 2023) con foco en backend C#/.NET sobre bases de datos Oracle y SQL Server. He migrado sistemas heredados (VB, PHP, .NET Framework) a ASP.NET Core y entregado módulos que hoy usan personas en todo el país.</p>
+        <p data-i18n="about_p2">Antes de escribir código me gusta entender el negocio: reuniones, flujos, estados y reglas. Con ese contexto analizo, estimo tiempos y recién ahí implemento. Uso IA generativa para medir tareas, explorar arquitectura y acelerar, y siempre reviso lo que produce. Aprendo de forma constante y no me rindo ante un problema difícil.</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- MAP -->
-<section id="map" class="block">
-  <h2 data-i18n="map_t">Mapa de misiones</h2>
-  <p class="sub" data-i18n="map_sub">Mi trayectoria como un recorrido. Toca cada nivel para ver qué hice y qué aprendí.</p>
-  <div class="progress" aria-live="polite">
-    <div class="bar"><i id="bar"></i></div>
-    <span id="count">0/7</span>
+<!-- TRAYECTORIA + STACK -->
+<section id="trayectoria" class="sec">
+  <div class="wrap grid">
+    <div class="lab"><b>02</b> <span data-i18n="nav_work">Trayectoria</span></div>
+    <div class="content">
+      <h2 class="h2 rv"><span data-i18n="work_t">Trayectoria</span> <em>2021 → <span data-i18n="now_word">hoy</span></em></h2>
+      <p class="sub rv" data-i18n="work_sub">Desplázate: el stack se ilumina según el rol que estás leyendo.</p>
+      <div class="work">
+        <div class="tl" id="tl"></div>
+        <aside class="stack" id="stack" aria-label="Stack"></aside>
+      </div>
+    </div>
   </div>
-  <ol class="path" id="path"></ol>
-  <div id="win" class="win" hidden></div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="block">
-  <h2 data-i18n="sk_t">Árbol de habilidades</h2>
-  <p class="sub" data-i18n="sk_sub">Autoevaluación honesta por nivel de dominio.</p>
-  <div class="legend">
-    <span><i class="pip on"></i><i class="pip on"></i><i class="pip on"></i> <span data-i18n="lv3">Dominio diario</span></span>
-    <span><i class="pip on"></i><i class="pip on"></i><i class="pip"></i> <span data-i18n="lv2">Sólido</span></span>
-    <span><i class="pip on"></i><i class="pip"></i><i class="pip"></i> <span data-i18n="lv1">En crecimiento</span></span>
+<!-- PROYECTOS -->
+<section id="proyectos" class="sec">
+  <div class="wrap grid">
+    <div class="lab"><b>03</b> <span data-i18n="nav_projects">Proyectos</span></div>
+    <div class="content">
+      <h2 class="h2 rv" data-i18n="pr_t">Proyectos</h2>
+
+      <a class="feature rv" href="https://stentro.co/" target="_blank" rel="noopener">
+        <div class="f-main">
+          <span class="f-tag" data-i18n="st_tag">Developer Full Stack · en construcción</span>
+          <span class="f-name">Stentro</span>
+          <span class="f-head" data-i18n="st_head">El inventario que entiende su negocio</span>
+        </div>
+        <div class="f-side">
+          <p data-i18n="st_desc">Aplicación web que reúne inventario, ventas, caja y fiados en una sola cuenta, con un asesor de IA que sugiere qué reponer, qué rebajar y dónde ganar más.</p>
+          <ul>
+            <li data-i18n="st_b1">Stock en tiempo real y alertas de bajo inventario</li>
+            <li data-i18n="st_b2">Caja diaria y control de fiados</li>
+            <li data-i18n="st_b3">Asesor con IA para decidir compras y precios</li>
+          </ul>
+          <span class="f-cta"><span data-i18n="st_cta">Visitar stentro.co</span> <i>↗</i></span>
+        </div>
+      </a>
+
+      <p class="sub rv repos" data-i18n="pr_sub">Mi trabajo en la Policía Nacional es institucional y no es público; estos repositorios muestran cómo construyo.</p>
+      <div class="projs" id="projs"></div>
+    </div>
   </div>
-  <div class="grid" id="skillgrid"></div>
 </section>
 
-<!-- PROJECTS -->
-<section id="projects" class="block">
-  <h2 data-i18n="pr_t">Proyectos destacados</h2>
-  <p class="sub" data-i18n="pr_sub">Mi trabajo en la Policía Nacional es institucional y no es público; estos repositorios muestran cómo construyo.</p>
-  <div class="cards" id="cards"></div>
-</section>
-
-<!-- METHOD -->
-<section id="method" class="block">
-  <h2 data-i18n="me_t">Cómo trabajo</h2>
-  <ol class="steps" id="steps"></ol>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="block contact">
-  <h2 data-i18n="ct_t">Hablemos</h2>
-  <p class="sub" data-i18n="ct_sub">Busco un rol remoto (nacional o internacional) como desarrollador .NET / Full Stack.</p>
-  <div class="cta">
-    <a class="btn primary" href="mailto:ing.maicollcalderonpardo@gmail.com">✉ ing.maicollcalderonpardo@gmail.com</a>
-    <a class="btn" href="https://www.linkedin.com/in/maicoll-calderon-pardo" target="_blank" rel="noopener">LinkedIn ↗</a>
-    <a class="btn" href="https://github.com/IngMaicollAndresCalderonPardo" target="_blank" rel="noopener">GitHub ↗</a>
+<!-- MÉTODO -->
+<section id="metodo" class="sec">
+  <div class="wrap grid">
+    <div class="lab"><b>04</b> <span data-i18n="nav_method">Método</span></div>
+    <div class="content">
+      <h2 class="h2 rv" data-i18n="me_t">Cómo trabajo</h2>
+      <ol class="steps" id="steps"></ol>
+    </div>
   </div>
-  <p class="small" data-i18n="ct_en">Inglés: B1 y en mejora activa (trabajé con equipos de EE. UU. en Parserr).</p>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="sec contact">
+  <div class="wrap grid">
+    <div class="lab"><b>05</b> <span data-i18n="nav_contact">Contacto</span></div>
+    <div class="content">
+      <h2 class="hello rv"><span data-i18n="ct_t">Hablemos</span><i>.</i></h2>
+      <p class="sub rv" data-i18n="ct_sub">Busco un rol remoto (nacional o internacional) como desarrollador .NET / Full Stack.</p>
+      <a class="mail rv" id="mail" href="mailto:ing.maicollcalderonpardo@gmail.com">ing.maicollcalderonpardo@gmail.com</a>
+      <div class="row rv">
+        <button class="btn solid" id="copy" type="button"><span data-i18n="copy">Copiar correo</span></button>
+        <a class="btn" href="https://www.linkedin.com/in/maicoll-calderon-pardo" target="_blank" rel="noopener">LinkedIn <i>↗</i></a>
+        <a class="btn" href="https://github.com/IngMaicollAndresCalderonPardo" target="_blank" rel="noopener">GitHub <i>↗</i></a>
+      </div>
+      <p class="small rv" data-i18n="ct_en">Inglés: B1 y en mejora activa (trabajé con equipos de EE. UU. en Parserr).</p>
+    </div>
+  </div>
 </section>
 </main>
 
-<footer>© <span id="yr"></span> Maicoll Calderón · <span data-i18n="foot">Hecho a mano con HTML, CSS y JS.</span></footer>
+<footer>
+  <div class="wrap">© <span id="yr"></span> Maicoll Calderón · <span data-i18n="foot">Hecho a mano con HTML, CSS y JS.</span></div>
+</footer>
 
 <script src="app.js"></script>
 </body>

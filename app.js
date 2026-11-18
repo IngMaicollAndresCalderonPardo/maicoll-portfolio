@@ -1,48 +1,62 @@
 (() => {
+document.documentElement.classList.add("js");
 const U = "https://github.com/IngMaicollAndresCalderonPardo/";
+const MAIL = "ing.maicollcalderonpardo@gmail.com";
 
 const T = {
 es: {
-  nav_map:"Misiones", nav_skills:"Habilidades", nav_projects:"Proyectos", nav_method:"Método", nav_contact:"Contacto",
+  nav_profile:"Perfil", nav_work:"Trayectoria", nav_projects:"Proyectos", nav_method:"Método", nav_contact:"Contacto",
   hero_eyebrow:"Full Stack .NET Developer · Mid-level",
   hero_lead:"Construyo sistemas que reemplazan procesos manuales por plataformas web a escala nacional. C#, .NET 8, Oracle PL/SQL y React, con análisis previo y la IA como copiloto.",
-  hero_start:"▶ Iniciar recorrido", hero_skip:"Prefiero la versión clásica",
+  hero_cta:"Ver trayectoria",
+  st_tag:"Developer Full Stack · en construcción", st_head:"El inventario que entiende su negocio",
+  st_desc:"Aplicación web que reúne inventario, ventas, caja y fiados en una sola cuenta, con un asesor de IA que sugiere qué reponer, qué rebajar y dónde ganar más.",
+  st_b1:"Stock en tiempo real y alertas de bajo inventario", st_b2:"Caja diaria y control de fiados", st_b3:"Asesor con IA para decidir compras y precios",
+  st_cta:"Visitar stentro.co",
+  f1k:"Antes", f1v:"Excel, plantillas llenadas a mano, sistemas heredados",
+  f2k:"Mi parte", f2v:"Análisis, PL/SQL y C#",
+  f3k:"Después", f3v:"Plataformas web de alcance nacional",
   st1:"años de experiencia", st2:"equipos / proyectos", st3v:"Nacional", st3:"alcance en producción", st4:"equipos internacionales",
-  about_t:"Sobre mí",
+  statement:"Entiendo el negocio primero. Después construyo el sistema.",
   about_p1:"Ingeniero de Sistemas (Universidad Cooperativa de Colombia, 2023) con foco en backend C#/.NET sobre bases de datos Oracle y SQL Server. He migrado sistemas heredados (VB, PHP, .NET Framework) a ASP.NET Core y entregado módulos que hoy usan personas en todo el país.",
   about_p2:"Antes de escribir código me gusta entender el negocio: reuniones, flujos, estados y reglas. Con ese contexto analizo, estimo tiempos y recién ahí implemento. Uso IA generativa para medir tareas, explorar arquitectura y acelerar, y siempre reviso lo que produce. Aprendo de forma constante y no me rindo ante un problema difícil.",
-  map_t:"Mapa de misiones", map_sub:"Mi trayectoria como un recorrido. Toca cada nivel para ver qué hice y qué aprendí.",
-  sk_t:"Árbol de habilidades", sk_sub:"Autoevaluación honesta por nivel de dominio.",
+  work_t:"Trayectoria", now_word:"hoy", now:"Actual", more:"más al pasar el cursor",
+  work_sub:"Desplázate: el stack se ilumina según el rol que estás leyendo.",
+  stack_hint:"Stack · se ilumina según el rol visible. Pasa el cursor sobre una habilidad para ver dónde la usé.",
   lv3:"Dominio diario", lv2:"Sólido", lv1:"En crecimiento",
-  pr_t:"Proyectos destacados", pr_sub:"Mi trabajo en la Policía Nacional es institucional y no es público; estos repositorios muestran cómo construyo.",
+  pr_t:"Proyectos", pr_sub:"Mi trabajo en la Policía Nacional es institucional y no es público; estos repositorios muestran cómo construyo.",
   me_t:"Cómo trabajo",
   ct_t:"Hablemos", ct_sub:"Busco un rol remoto (nacional o internacional) como desarrollador .NET / Full Stack.",
   ct_en:"Inglés: B1 y en mejora activa (trabajé con equipos de EE. UU. en Parserr).",
-  foot:"Hecho a mano con HTML, CSS y JS.",
-  win_t:"🏆 Logro desbloqueado: Recorrido completo",
-  win_p:"Pasaste por todos los niveles. Si te interesa lo que viste, escríbeme: me encantaría contarte más.",
-  view:"Ver repositorio →", boss:"NIVEL ACTUAL"
+  copy:"Copiar correo", copied:"Copiado ✓",
+  foot:"Hecho a mano con HTML, CSS y JS."
 },
 en: {
-  nav_map:"Missions", nav_skills:"Skills", nav_projects:"Projects", nav_method:"Method", nav_contact:"Contact",
+  nav_profile:"Profile", nav_work:"Experience", nav_projects:"Projects", nav_method:"Method", nav_contact:"Contact",
   hero_eyebrow:"Full Stack .NET Developer · Mid-level",
   hero_lead:"I build systems that replace manual processes with nationwide web platforms. C#, .NET 8, Oracle PL/SQL and React, with upfront analysis and AI as a copilot.",
-  hero_start:"▶ Start the tour", hero_skip:"I prefer the classic version",
+  hero_cta:"See experience",
+  st_tag:"Full Stack Developer · early stage", st_head:"Inventory that understands your business",
+  st_desc:"A web app that brings inventory, sales, cash register and customer credit into one account, with an AI advisor that suggests what to reorder, what to discount and where to earn more.",
+  st_b1:"Real-time stock and low-inventory alerts", st_b2:"Daily cash register and customer-credit tracking", st_b3:"AI advisor for purchasing and pricing decisions",
+  st_cta:"Visit stentro.co",
+  f1k:"Before", f1v:"Excel, hand-filled templates, legacy systems",
+  f2k:"My part", f2v:"Analysis, PL/SQL and C#",
+  f3k:"After", f3v:"Nationwide web platforms",
   st1:"years of experience", st2:"teams / projects", st3v:"Nationwide", st3:"scope in production", st4:"international teams",
-  about_t:"About me",
+  statement:"Business first. Then the system.",
   about_p1:"Systems Engineer (Universidad Cooperativa de Colombia, 2023) focused on C#/.NET backends over Oracle and SQL Server. I've migrated legacy systems (VB, PHP, .NET Framework) to ASP.NET Core and shipped modules now used by people across the whole country.",
   about_p2:"Before writing code I like to understand the business: meetings, flows, states and rules. With that context I analyze, estimate, and only then implement. I use generative AI to size tasks, explore architecture and move faster, and I always review what it produces. I learn constantly and don't give up on hard problems.",
-  map_t:"Mission map", map_sub:"My career as a journey. Tap each level to see what I did and learned.",
-  sk_t:"Skill tree", sk_sub:"Honest self-assessment by proficiency level.",
+  work_t:"Experience", now_word:"today", now:"Current", more:"on hover",
+  work_sub:"Scroll: the stack lights up for the role you're reading.",
+  stack_hint:"Stack · lights up for the visible role. Hover a skill to see where I used it.",
   lv3:"Daily driver", lv2:"Solid", lv1:"Growing",
-  pr_t:"Featured projects", pr_sub:"My Policía Nacional work is institutional and not public; these repositories show how I build.",
+  pr_t:"Projects", pr_sub:"My Policía Nacional work is institutional and not public; these repositories show how I build.",
   me_t:"How I work",
   ct_t:"Let's talk", ct_sub:"I'm looking for a remote role (domestic or international) as a .NET / Full Stack developer.",
   ct_en:"English: B1 and actively improving (I worked with US teams at Parserr).",
-  foot:"Handcrafted with HTML, CSS and JS.",
-  win_t:"🏆 Achievement unlocked: Full tour completed",
-  win_p:"You went through every level. If you liked what you saw, reach out — I'd love to tell you more.",
-  view:"View repository →", boss:"CURRENT LEVEL"
+  copy:"Copy email", copied:"Copied ✓",
+  foot:"Handcrafted with HTML, CSS and JS."
 }};
 
 const LEVELS = [
@@ -61,7 +75,7 @@ const LEVELS = [
  { when:{es:"Feb 2025 – Ago 2025",en:"Feb 2025 – Aug 2025"}, role:{es:"Formación autodirigida",en:"Self-directed training"}, org:{es:"Inglés y proyectos de práctica",en:"English and practice projects"},
    pts:{es:["Estudio diario de inglés: de A2 a B1.","Construí y publiqué proyectos en GitHub: microservicios con Python + React + Docker, Angular + ASP.NET Core, arquitectura limpia en .NET 8, xUnit y PL/SQL.","Convertí una pausa en preparación: más inglés, más práctica y mejores bases."],
         en:["Daily English study: from A2 to B1.","Built and published GitHub projects: Python + React + Docker microservices, Angular + ASP.NET Core, clean architecture in .NET 8, xUnit and PL/SQL.","Turned a pause into preparation: more English, more practice and stronger foundations."]},
-   tech:["English","Python","React","Docker","xUnit"] },
+   tech:["English","Python","React","Docker","PostgreSQL","xUnit"] },
  { when:{es:"Sep 2025 – Nov 2025",en:"Sep 2025 – Nov 2025"}, role:{es:"Desarrollador .NET (remoto, EE. UU.)",en:".NET Developer (remote, USA)"}, org:"Parserr",
    pts:{es:["APIs y endpoints en .NET/C# con Entity Framework.","Pruebas unitarias bajo la metodología de testing de la compañía.","Integración backend con React y coordinación con el equipo frontend.","Comunicación técnica en inglés con equipos internacionales y con el CEO; Agile/Scrum, Azure y Rider."],
         en:[".NET/C# APIs and endpoints with Entity Framework.","Unit testing following the company's testing methodology.","Backend integration with React and coordination with the frontend team.","Technical communication in English with international teams and the CEO; Agile/Scrum, Azure and Rider."]},
@@ -76,30 +90,31 @@ const LEVELS = [
    tech:["ASP.NET Core 8","Oracle PL/SQL","QuestPDF","ZXing","PSE","Excel"] }
 ];
 
+// [nombre, nivel 1-3, descripción, palabras clave para iluminar según el rol ("*" = transversal)]
 const SKILLS = [
  {g:{es:"Backend",en:"Backend"}, items:[
-  ["C# / .NET 8",3,{es:"Core, MVC, Razor Pages, Framework",en:"Core, MVC, Razor Pages, Framework"}],
-  ["ASP.NET Core MVC",3,{es:"Arquitectura limpia, SOLID",en:"Clean architecture, SOLID"}],
-  ["REST APIs",3,{es:"Versionado, JWT, integraciones",en:"Versioning, JWT, integrations"}],
-  ["xUnit / Moq",2,{es:"Pruebas unitarias y cobertura",en:"Unit testing and coverage"}]]},
+  ["C# / .NET 8",3,{es:"Core, MVC, Razor Pages, Framework",en:"Core, MVC, Razor Pages, Framework"},["c#",".net","asp.net"]],
+  ["ASP.NET Core MVC",3,{es:"Arquitectura limpia, SOLID",en:"Clean architecture, SOLID"},["asp.net","razor"]],
+  ["REST APIs",3,{es:"Versionado, JWT, integraciones",en:"Versioning, JWT, integrations"},["rest","api"]],
+  ["xUnit / Moq",2,{es:"Pruebas unitarias y cobertura",en:"Unit testing and coverage"},["xunit","moq","unit","unitarias"]]]},
  {g:{es:"Datos",en:"Data"}, items:[
-  ["Oracle PL/SQL",3,{es:"Procedimientos, paquetes, triggers",en:"Procedures, packages, triggers"}],
-  ["SQL Server",2,{es:"T-SQL, SSMS, automatización",en:"T-SQL, SSMS, automation"}],
-  ["PostgreSQL",1,{es:"Migraciones con Alembic",en:"Alembic migrations"}]]},
+  ["Oracle PL/SQL",3,{es:"Procedimientos, paquetes, triggers",en:"Procedures, packages, triggers"},["oracle","pl/sql"]],
+  ["SQL Server",2,{es:"T-SQL, SSMS, automatización",en:"T-SQL, SSMS, automation"},["sql server"]],
+  ["PostgreSQL",1,{es:"Migraciones con Alembic",en:"Alembic migrations"},["postgres"]]]},
  {g:{es:"Frontend",en:"Frontend"}, items:[
-  ["React",2,{es:"Hooks, SPA, consumo de APIs",en:"Hooks, SPA, API consumption"}],
-  ["Angular",2,{es:"TypeScript, formularios, servicios",en:"TypeScript, forms, services"}],
-  ["JS / TS / Bootstrap",2,{es:"UI responsiva",en:"Responsive UI"}]]},
+  ["React",2,{es:"Hooks, SPA, consumo de APIs",en:"Hooks, SPA, API consumption"},["react"]],
+  ["Angular",2,{es:"TypeScript, formularios, servicios",en:"TypeScript, forms, services"},["angular"]],
+  ["JS / TS / Bootstrap",2,{es:"UI responsiva",en:"Responsive UI"},["javascript","typescript","bootstrap","angular","react"]]]},
  {g:{es:"DevOps y flujo",en:"DevOps & workflow"}, items:[
-  ["Docker / Compose",2,{es:"Microservicios reproducibles",en:"Reproducible microservices"}],
-  ["Azure DevOps CI/CD",2,{es:"Pipelines YAML",en:"YAML pipelines"}],
-  ["Git",3,{es:"Control de versiones",en:"Version control"}],
-  ["IA generativa",3,{es:"Análisis, estimación y código asistido",en:"Analysis, estimation and assisted coding"}]]},
+  ["Docker / Compose",2,{es:"Microservicios reproducibles",en:"Reproducible microservices"},["docker"]],
+  ["Azure DevOps CI/CD",2,{es:"Pipelines YAML",en:"YAML pipelines"},["azure","ci/cd"]],
+  ["Git",3,{es:"Control de versiones",en:"Version control"},["*"]],
+  ["IA generativa",3,{es:"Análisis, estimación y código asistido",en:"Analysis, estimation and assisted coding"},["*"]]]},
  {g:{es:"Versatilidad",en:"Versatility"}, items:[
-  ["Código heredado",3,{es:"Leer y migrar VB, PHP y .NET Framework",en:"Reading and migrating VB, PHP and .NET Framework"}],
-  ["Jobs en base de datos",2,{es:"Tareas programadas y por lotes en Oracle/SQL Server",en:"Scheduled and batch tasks in Oracle/SQL Server"}],
-  ["Android / Kotlin",1,{es:"Apps móviles en Android Studio, Kotlin básico",en:"Mobile apps in Android Studio, basic Kotlin"}],
-  ["Unity",1,{es:"Formación en desarrollo de juegos",en:"Game development training"}]]}
+  ["Código heredado",3,{es:"Leer y migrar VB, PHP y .NET Framework",en:"Reading and migrating VB, PHP and .NET Framework"},["heredad","legacy","vb","php"]],
+  ["Jobs en base de datos",2,{es:"Tareas programadas y por lotes en Oracle/SQL Server",en:"Scheduled and batch tasks in Oracle/SQL Server"},["automat","tarea","job"]],
+  ["Android / Kotlin",1,{es:"Apps móviles en Android Studio, Kotlin básico",en:"Mobile apps in Android Studio, basic Kotlin"},["android","kotlin"]],
+  ["Unity",1,{es:"Formación en desarrollo de juegos",en:"Game development training"},["unity"]]]}
 ];
 
 const PROJECTS = [
@@ -120,63 +135,178 @@ const STEPS = [
  {t:{es:"Soporte y mejora",en:"Support and improvement"}, d:{es:"Acompaño el sistema en producción y aprendo de cada incidente.",en:"I stay with the system in production and learn from every incident."}}
 ];
 
-let lang = "es", done = new Set();
 const $ = s => document.querySelector(s);
-const pips = n => [1,2,3].map(i=>`<i class="pip${i<=n?" on":""}"></i>`).join("");
+const $$ = s => [...document.querySelectorAll(s)];
+const root = document.documentElement;
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const canHover = matchMedia("(hover:hover) and (pointer:fine)").matches;
+
+let lang = "es", active = -1;
+
+// texto de cada rol (ambos idiomas) para cruzar con las habilidades
+const HAY = LEVELS.map(l => (l.tech.join(" ")+" "+l.pts.es.join(" ")+" "+l.pts.en.join(" ")+" "+l.role.es+" "+l.role.en).toLowerCase());
+const FLAT = SKILLS.flatMap(g => g.items);
+const uses = (s, i) => s[3].some(k => k === "*" || HAY[i].includes(k));
+
+function meter(n){ return `<span class="sm" data-l="${n}">${[1,2,3].map(i=>`<i${i<=n?' class="on"':""}></i>`).join("")}</span>`; }
 
 function render(){
   const t = T[lang];
-  document.documentElement.lang = lang;
-  document.querySelectorAll("[data-i18n]").forEach(el => { const v=t[el.dataset.i18n]; if(v) el.textContent=v; });
-  $("#lang").textContent = lang==="es" ? "EN" : "ES";
+  root.lang = lang;
+  $$("[data-i18n]").forEach(el => { const v = t[el.dataset.i18n]; if (v != null) el.textContent = v; });
+  $("#lang").textContent = lang === "es" ? "EN" : "ES";
 
-  $("#path").innerHTML = LEVELS.map((l,i)=>`
-    <li class="lvl${l.boss?" boss":""}${done.has(i)?" done open":""}" data-n="${i+1}" data-i="${i}">
-      <button aria-expanded="${done.has(i)}">
-        <div class="top"><h3>${l.role[lang]}${l.boss?`<span class="tag">${t.boss}</span>`:""}</h3><span class="when">${l.when[lang]}</span></div>
-        <div class="org">${typeof l.org==="string"?l.org:l.org[lang]}</div>
-        <div class="detail"><div>
-          <ul>${l.pts[lang].map(p=>`<li>${p}</li>`).join("")}</ul>
-          <div class="chips">${l.tech.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
-        </div></div>
-      </button>
-    </li>`).join("");
+  // trayectoria: del más reciente al más antiguo
+  const order = LEVELS.map((_, i) => i).reverse();
+  $("#tl").innerHTML = order.map(i => {
+    const l = LEVELS[i], pts = l.pts[lang], org = typeof l.org === "string" ? l.org : l.org[lang];
+    const [first, ...rest] = pts;
+    return `<article class="role rv${l.boss?" now":""}" tabindex="0" data-i="${i}">
+      <span class="dot"></span>
+      <div class="when">${l.when[lang]}</div>
+      <h3>${l.role[lang]}${l.boss?`<span class="now-tag"><i></i>${t.now}</span>`:""}</h3>
+      <p class="org">${org}</p>
+      <ul class="pts"><li>${first}</li></ul>
+      ${rest.length?`<div class="extra"><div><ul class="pts" style="margin-top:0">${rest.map(p=>`<li>${p}</li>`).join("")}</ul></div></div>
+      <span class="more-hint">+${rest.length} · ${t.more}</span>`:""}
+      <div class="tech">${l.tech.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
+    </article>`;
+  }).join("");
 
-  $("#skillgrid").innerHTML = SKILLS.map(g=>`<div class="group">${g.g[lang]}</div>`+
-    g.items.map(([n,l,d])=>`<div class="sk"><span class="pips">${pips(l)}</span><b>${n}</b><small>${d[lang]}</small></div>`).join("")).join("");
+  // stack
+  let n = 0;
+  $("#stack").innerHTML = `<p class="stack-head">${t.stack_hint}</p>
+    <div class="legend"><span>${meter(3)}${t.lv3}</span><span>${meter(2)}${t.lv2}</span><span>${meter(1)}${t.lv1}</span></div>` +
+    SKILLS.map(g => `<div class="gl">${g.g[lang]}</div>` + g.items.map(s => {
+      const idx = n++;
+      return `<div class="sk" tabindex="0" data-s="${idx}"><span class="sn">${s[0]}</span>${meter(s[1])}<span class="sd">${s[2][lang]}</span></div>`;
+    }).join("")).join("");
 
-  $("#cards").innerHTML = PROJECTS.map(p=>`
-    <a class="card" href="${U+p.n}" target="_blank" rel="noopener">
-      <h3>${p.n}</h3><p>${p.d[lang]}</p>
-      <div class="chips">${p.t.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
-      <span class="go">${t.view}</span></a>`).join("");
+  // proyectos
+  $("#projs").innerHTML = PROJECTS.map((p, i) => `
+    <a class="proj" href="${U+p.n}" target="_blank" rel="noopener">
+      <span class="pi">0${i+1}</span><span class="pn">${p.n}</span>
+      <span class="pt">${p.t.join(" · ")}</span><span class="pa">↗</span>
+      <p class="pd">${p.d[lang]}</p></a>`).join("");
+  $("#projs").classList.add("rv");
 
-  $("#steps").innerHTML = STEPS.map(s=>`<li><b>${s.t[lang]}</b><span>${s.d[lang]}</span></li>`).join("");
-  progress();
+  // método
+  $("#steps").innerHTML = STEPS.map((s, i) => `<li class="rv" style="--d:${i*.09}s"><span class="n">0${i+1}</span><b>${s.t[lang]}</b><span class="d">${s.d[lang]}</span></li>`).join("");
+
+  bind();
+  if (active < 0) active = LEVELS.length - 1;
+  setActive(active);
 }
 
-function progress(){
-  const n = done.size, t = T[lang];
-  $("#bar").style.width = (n/LEVELS.length*100)+"%";
-  $("#count").textContent = `${n}/${LEVELS.length}`;
-  const w = $("#win");
-  if(n===LEVELS.length){ w.hidden=false; w.innerHTML=`<b>${t.win_t}</b><p>${t.win_p}</p>`; } else w.hidden=true;
+/* ---------- iluminar el stack según el rol visible ---------- */
+function setActive(i){
+  active = i;
+  $$(".role").forEach(r => r.classList.toggle("on", +r.dataset.i === i));
+  $("#stack").classList.add("has-active");
+  $$(".sk").forEach(el => el.classList.toggle("lit", uses(FLAT[+el.dataset.s], i)));
 }
 
-$("#path").addEventListener("click", e=>{
-  const li = e.target.closest(".lvl"); if(!li) return;
-  const i = +li.dataset.i, open = li.classList.toggle("open");
-  li.querySelector("button").setAttribute("aria-expanded", open);
-  if(open){ done.add(i); li.classList.add("done"); progress(); }
-});
+/* ---------- observadores ---------- */
+let rvObs, roleObs, secObs;
+function bind(){
+  rvObs && rvObs.disconnect(); roleObs && roleObs.disconnect();
+  rvObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); rvObs.unobserve(e.target); } }), {threshold:.12, rootMargin:"0px 0px -6% 0px"});
+  $$(".rv").forEach(el => rvObs.observe(el));
+  roleObs = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) setActive(+e.target.dataset.i); }), {rootMargin:"-45% 0px -50% 0px"});
+  $$(".role").forEach(el => roleObs.observe(el));
+}
+secObs = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) $$(".top nav a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+}), {rootMargin:"-40% 0px -55% 0px"});
+$$(".sec").forEach(s => secObs.observe(s));
 
-$("#lang").addEventListener("click", ()=>{
-  lang = lang==="es" ? "en" : "es";
+/* resaltar los roles donde usé una habilidad (al pasar el cursor o enfocar) */
+const stack = $("#stack"), tl = $("#tl");
+function hl(el){
+  const s = el && el.closest(".sk");
+  if (!s){ tl.classList.remove("hovering"); $$(".role").forEach(r => r.classList.remove("hl")); return; }
+  const sk = FLAT[+s.dataset.s];
+  tl.classList.add("hovering");
+  $$(".role").forEach(r => r.classList.toggle("hl", uses(sk, +r.dataset.i)));
+}
+stack.addEventListener("mouseover", e => hl(e.target));
+stack.addEventListener("mouseleave", () => hl(null));
+stack.addEventListener("focusin", e => hl(e.target));
+stack.addEventListener("focusout", () => hl(null));
+
+/* ---------- nombre: las letras reaccionan al cursor ---------- */
+(function name(){
+  const h = $("#name");
+  h.innerHTML = ["Maicoll","Calderón"].map((w, r) =>
+    `<span class="ln l${r}" aria-hidden="true">${[...w].map((c, k) => `<span class="ch" style="--k:${k + r*4}">${c}</span>`).join("")}</span>`).join("");
+  if (reduced || !canHover) return;
+  const letters = $$(".ch"); let px = -9999, py = -9999, raf = 0;
+  const hero = $(".hero");
+  const tick = () => {
+    raf = 0;
+    letters.forEach(el => {
+      const b = el.getBoundingClientRect(), cx = b.left + b.width/2, cy = b.top + b.height/2;
+      const d = Math.hypot(px - cx, py - cy), p = Math.max(0, 1 - d/230);
+      el.style.setProperty("--p", p.toFixed(3));
+      el.style.setProperty("--y", (p*p*34).toFixed(1));
+    });
+  };
+  hero.addEventListener("pointermove", e => { px = e.clientX; py = e.clientY; if (!raf) raf = requestAnimationFrame(tick); });
+  hero.addEventListener("pointerleave", () => { px = py = -9999; if (!raf) raf = requestAnimationFrame(tick); });
+})();
+
+/* ---------- pizarra de puntos (alcance nacional) ---------- */
+$(".dots").innerHTML = Array.from({length:36}, (_, i) => `<i style="animation-delay:${((i*0.53)%3.4).toFixed(2)}s"></i>`).join("");
+
+/* ---------- contadores ---------- */
+const cObs = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, to = +el.dataset.count; cObs.unobserve(el);
+  if (reduced){ el.textContent = to; return; }
+  const t0 = performance.now();
+  (function step(now){ const k = Math.min(1, (now - t0)/1100); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); })(t0);
+}), {threshold:.6});
+$$("[data-count]").forEach(el => cObs.observe(el));
+
+/* ---------- scroll: barra, cabecera, línea de tiempo ---------- */
+let sTick = 0;
+function onScroll(){
+  if (sTick) return;
+  sTick = requestAnimationFrame(() => {
+    sTick = 0;
+    const max = document.documentElement.scrollHeight - innerHeight;
+    $("#sp").style.setProperty("--sp", max > 0 ? (scrollY/max).toFixed(4) : 0);
+    $("#topbar").classList.toggle("stuck", scrollY > 8);
+    const r = tl.getBoundingClientRect();
+    tl.style.setProperty("--p", Math.max(0, Math.min(1, (innerHeight*.5 - r.top)/r.height)).toFixed(4));
+  });
+}
+addEventListener("scroll", onScroll, {passive:true}); addEventListener("resize", onScroll);
+
+/* ---------- controles ---------- */
+$("#lang").addEventListener("click", () => {
+  lang = lang === "es" ? "en" : "es";
   try{ localStorage.setItem("lang", lang); }catch(e){}
-  render();
+  render(); onScroll();
+});
+$("#theme").addEventListener("click", () => {
+  const now = root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  const next = now === "dark" ? "light" : "dark";
+  root.dataset.theme = next;
+  try{ localStorage.setItem("theme", next); }catch(e){}
+});
+$("#copy").addEventListener("click", async () => {
+  try{ await navigator.clipboard.writeText(MAIL); }
+  catch(e){ const ta = document.createElement("textarea"); ta.value = MAIL; document.body.appendChild(ta); ta.select(); try{ document.execCommand("copy"); }catch(_){} ta.remove(); }
+  const s = $("#copy span"); s.textContent = T[lang].copied;
+  setTimeout(() => { s.textContent = T[lang].copy; }, 1800);
 });
 
 $("#yr").textContent = new Date().getFullYear();
-try { const s = localStorage.getItem("lang"); if(s) lang = s; else lang = (navigator.language||"es").toLowerCase().startsWith("en") ? "en" : "es"; } catch(e){}
-render();
+try{
+  const th = localStorage.getItem("theme"); if (th) root.dataset.theme = th;
+  const s = localStorage.getItem("lang");
+  lang = s || ((navigator.language||"es").toLowerCase().startsWith("en") ? "en" : "es");
+}catch(e){}
+render(); onScroll();
 })();
