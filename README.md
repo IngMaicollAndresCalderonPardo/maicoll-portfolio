@@ -8,7 +8,7 @@ Portfolio interactivo de **Maicoll Andrés Calderón Pardo**, Full Stack .NET De
 
 - 🧭 **Hero interactivo:** el nombre reacciona al cursor y un esquema animado cuenta «proceso manual → plataforma nacional».
 - 🕰️ **Trayectoria + stack ligados:** al hacer scroll por los roles, el stack se ilumina según lo que usé en cada uno; al pasar el cursor por una habilidad se resaltan los roles donde la usé. Sin clics.
-- 🚀 **Proyectos:** Stentro (software de inventario con IA para pymes, donde participo como Full Stack Developer) como bloque destacado, y un índice con enlaces a mis repositorios.
+- 🚀 **Proyectos:** una colaboración destacada en Stentro (plataforma de inventario con IA para pymes, en la que he participado como Full Stack Developer), y un índice con enlaces a mis repositorios.
 - 🧩 **Método:** contexto, análisis, estimación con IA, implementación, pruebas y soporte.
 - 🌐 **Bilingüe** (ES/EN) y tema claro/oscuro (automático, con botón para cambiarlo).
 
