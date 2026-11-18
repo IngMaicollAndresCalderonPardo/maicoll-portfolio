@@ -9,10 +9,6 @@ es: {
   hero_eyebrow:"Full Stack .NET Developer · Mid-level",
   hero_lead:"Construyo sistemas que reemplazan procesos manuales por plataformas web a escala nacional. C#, .NET 8, Oracle PL/SQL y React, con análisis previo y la IA como copiloto.",
   hero_cta:"Ver trayectoria",
-  st_tag:"Colaboración · Full Stack Developer", st_head:"El inventario que entiende su negocio",
-  st_desc:"Producto de un equipo en el que he participado como Full Stack Developer: una aplicación web que reúne inventario, ventas, caja y fiados en una sola cuenta, con un asesor de IA que sugiere qué reponer, qué rebajar y dónde ganar más.",
-  st_b1:"Stock en tiempo real y alertas de bajo inventario", st_b2:"Caja diaria y control de fiados", st_b3:"Asesor con IA para decidir compras y precios",
-  st_cta:"Conocer Stentro",
   f1k:"Antes", f1v:"Excel, plantillas llenadas a mano, sistemas heredados",
   f2k:"Mi parte", f2v:"Análisis, PL/SQL y C#",
   f3k:"Después", f3v:"Plataformas web de alcance nacional",
@@ -36,10 +32,6 @@ en: {
   hero_eyebrow:"Full Stack .NET Developer · Mid-level",
   hero_lead:"I build systems that replace manual processes with nationwide web platforms. C#, .NET 8, Oracle PL/SQL and React, with upfront analysis and AI as a copilot.",
   hero_cta:"See experience",
-  st_tag:"Collaboration · Full Stack Developer", st_head:"Inventory that understands your business",
-  st_desc:"A team product I have contributed to as a Full Stack Developer: a web app that brings inventory, sales, cash register and customer credit into one account, with an AI advisor that suggests what to reorder, what to discount and where to earn more.",
-  st_b1:"Real-time stock and low-inventory alerts", st_b2:"Daily cash register and customer-credit tracking", st_b3:"AI advisor for purchasing and pricing decisions",
-  st_cta:"Learn about Stentro",
   f1k:"Before", f1v:"Excel, hand-filled templates, legacy systems",
   f2k:"My part", f2v:"Analysis, PL/SQL and C#",
   f3k:"After", f3v:"Nationwide web platforms",
@@ -76,6 +68,10 @@ const LEVELS = [
    pts:{es:["Estudio diario de inglés: de A2 a B1.","Construí y publiqué proyectos en GitHub: microservicios con Python + React + Docker, Angular + ASP.NET Core, arquitectura limpia en .NET 8, xUnit y PL/SQL.","Convertí una pausa en preparación: más inglés, más práctica y mejores bases."],
         en:["Daily English study: from A2 to B1.","Built and published GitHub projects: Python + React + Docker microservices, Angular + ASP.NET Core, clean architecture in .NET 8, xUnit and PL/SQL.","Turned a pause into preparation: more English, more practice and stronger foundations."]},
    tech:["English","Python","React","Docker","PostgreSQL","xUnit"] },
+ { when:{es:"2025 – 2026",en:"2025 – 2026"}, role:{es:"Developer Full Stack",en:"Full Stack Developer"}, org:"Stentro", url:"https://stentro.co/",
+   pts:{es:["Miembro del equipo de desarrollo de una plataforma de inventario, ventas, caja y fiados para pymes, con un asesor de IA que sugiere qué reponer, qué rebajar y dónde ganar más.","APIs en .NET con Entity Framework; trabajo en backend y frontend, que se ejecutan como procesos independientes.","Servicios contenerizados con Docker; la plataforma está organizada y separada por industrias."],
+        en:["Member of the development team of an inventory, sales, cash-register and customer-credit platform for small businesses, with an AI advisor that suggests what to reorder, what to discount and where to earn more.","APIs in .NET with Entity Framework; I work on backend and frontend, which run as independent processes.","Services containerized with Docker; the platform is organized and separated by industry."]},
+   tech:[".NET","Entity Framework","APIs REST","Docker"] },
  { when:{es:"Sep 2025 – Nov 2025",en:"Sep 2025 – Nov 2025"}, role:{es:"Desarrollador .NET (remoto, EE. UU.)",en:".NET Developer (remote, USA)"}, org:"Parserr",
    pts:{es:["APIs y endpoints en .NET/C# con Entity Framework.","Pruebas unitarias bajo la metodología de testing de la compañía.","Integración backend con React y coordinación con el equipo frontend.","Comunicación técnica en inglés con equipos internacionales y con el CEO; Agile/Scrum, Azure y Rider."],
         en:[".NET/C# APIs and endpoints with Entity Framework.","Unit testing following the company's testing methodology.","Backend integration with React and coordination with the frontend team.","Technical communication in English with international teams and the CEO; Agile/Scrum, Azure and Rider."]},
@@ -164,12 +160,14 @@ function render(){
     return `<article class="role rv${l.boss?" now":""}" tabindex="0" data-i="${i}">
       <span class="dot"></span>
       <div class="when">${l.when[lang]}</div>
-      <h3>${l.role[lang]}${l.boss?`<span class="now-tag"><i></i>${t.now}</span>`:""}</h3>
-      <p class="org">${org}</p>
-      <ul class="pts"><li>${first}</li></ul>
-      ${rest.length?`<div class="extra"><div><ul class="pts" style="margin-top:0">${rest.map(p=>`<li>${p}</li>`).join("")}</ul></div></div>
-      <span class="more-hint">+${rest.length} · ${t.more}</span>`:""}
-      <div class="tech">${l.tech.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
+      <div class="rb">
+        <h3>${l.role[lang]}${l.boss?`<span class="now-tag"><i></i>${t.now}</span>`:""}</h3>
+        <p class="org">${l.url?`<a href="${l.url}" target="_blank" rel="noopener">${org} ↗</a>`:org}</p>
+        <ul class="pts"><li>${first}</li></ul>
+        ${rest.length?`<div class="extra"><div><ul class="pts" style="margin-top:0">${rest.map(p=>`<li>${p}</li>`).join("")}</ul></div></div>
+        <span class="more-hint">+${rest.length} · ${t.more}</span>`:""}
+        <div class="tech">${l.tech.map(x=>`<span class="chip">${x}</span>`).join("")}</div>
+      </div>
     </article>`;
   }).join("");
 
